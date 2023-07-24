@@ -2,14 +2,17 @@
 <html>
 <style>
 @keyframes floating {
-	0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-@keyframes floating2 {
 	0% { transform: translateY(0%); }
-    50% { transform: translateY(10%); }
+    50% { transform: translateY(5%); }
     100% { transform: translateY(0%); }
 }
+
+body {
+  background-image: url('https://cdn.wallpapersafari.com/31/16/se9FDB.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .profilePic{
     margin-left: 50%;
     margin-top: 0px;
@@ -19,35 +22,28 @@
     background-image: url(https://media.discordapp.net/attachments/175296135903051777/1132472727203229816/Leonardo_Diffusion_Black_hood_no_face_blonde_3.png?width=314&height=473);
     background-size: cover;
     background-repeat: no-repeat;
-   // border-radius: 125px 60px 50px 100px
+    border-radius: 30px;
+    border: ridge 5px;
+    overflow: hidden;
 }
 
-.clouDiv1{
+.cloud{
 	animation-name: floating;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    position: absolute;
-	margin-left:-400px;
-    height: 800px;
-    width: 800px;
-    scale:0.5;
-}
-
-.clouds{
-	animation-name: floating2;
-    animation-duration: 3s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    background-image: url(https://cdn.discordapp.com/attachments/175296135903051777/1132873414546309162/cloud-png-transparent-21.png);
+    margin-left: 0%;
+    margin-top: 0px;
+    height: 100%;
+    width: 450px;
+    position: absolute;
+    background-image: url(https://png.pngtree.com/png-clipart/20220830/ourmid/pngtree-black-mist-png-image_6129776.png);
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
-	margin-left:-400px;
-    height: 800px;
-    width: 800px;
-    scale:1;
+
+   
 }
+
 
 </style>
 
@@ -56,8 +52,8 @@
 
 
 <body>
-<div class="profilePic"><div>
-<div class="clouDiv1"><img class="clouds" src="https://cdn.discordapp.com/attachments/175296135903051777/1132873414546309162/cloud-png-transparent-21.png">
+<div class="profilePic"><div class="cloud">
+
 
 </body>
 </html>
