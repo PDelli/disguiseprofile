@@ -1,77 +1,65 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
+<!DOCTYPE html>
 <html>
-<head>
-<header>
 <style>
-
-
-body {
-	overflow: hidden;
-  background-image: url('https://mcdn.wallpapersafari.com/medium/96/31/2MGOCH.jpg');
-  height: 50%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
+@keyframes floating {
+	0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
-
-.glow{
-	margin-left: 5px;
-    margin-top: -95px;
-    height: 800px;
-    width: 800px;
-    position: absolute;
-   
-    background-size: cover;
-    background-repeat: no-repeat;
-
+@keyframes floating2 {
+	0% { transform: translateY(0%); }
+    50% { transform: translateY(10%); }
+    100% { transform: translateY(0%); }
 }
-
-.mainframe{
-    margin-left: 165px;
-    margin-top: 90px;
+.profilePic{
+    margin-left: 50%;
+    margin-top: 0px;
     height: 600px;
     width: 450px;
-    position: relative;
-    background-image: url(https://cdn.discordapp.com/attachments/175296135903051777/1130845538472955984/Leonardo_Diffusion_dark_Blonde_boy_kid_using_cute_animal_shape_0.png);
+    position: absolute;
+    background-image: url(https://media.discordapp.net/attachments/175296135903051777/1132472727203229816/Leonardo_Diffusion_Black_hood_no_face_blonde_3.png?width=314&height=473);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: coral;
-    border-radius: 60px 60px 60px 60px;
-    border-style: inset;
+   // border-radius: 125px 60px 50px 100px
 }
 
-.nameplate{
-    margin-left: 230px;
-    margin-top: -170px;
-    rotate: 5deg;
-    height: 300px;
-    width: 600px;
-    position: relative;
-    background-image: url(https://cdn.discordapp.com/attachments/1086496076749611110/1130856790897197096/image.png);
+.clouDiv1{
+	animation-name: floating;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+	margin-left:-400px;
+    height: 800px;
+    width: 800px;
+    scale:0.5;
+}
+
+.clouds{
+	animation-name: floating2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-image: url(https://cdn.discordapp.com/attachments/175296135903051777/1132873414546309162/cloud-png-transparent-21.png);
     background-size: cover;
     background-repeat: no-repeat;
+    position: absolute;
+	margin-left:-400px;
+    height: 800px;
+    width: 800px;
+    scale:1;
 }
+
 </style>
-</header>
-</head>
+
+
+
+
+
 <body>
-<img class="glow" src="https://cdn.discordapp.com/attachments/1086496076749611110/1130889983230758973/Glow-Golden-PNG-File.png"></img>
-<div class="mainframe"></div>
-<div class="nameplate"></div>
+<div class="profilePic"><div>
+<div class="clouDiv1"><img class="clouds" src="https://cdn.discordapp.com/attachments/175296135903051777/1132873414546309162/cloud-png-transparent-21.png">
 
-<script>
-for (var i = 0; i < 9; i++) {
-  $(document).ready(function moveparty(){
-  $(document.getElementsByClassName("glow")).fadeIn(0)
-  $(document.getElementsByClassName("glow")).fadeOut(3000)
-  $(document.getElementsByClassName("glow")).fadeIn(3000)
-  
+</body>
+</html>
 
-  });
 
-}
- 
-</script>
